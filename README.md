@@ -17,7 +17,6 @@ yarn dev
 
 ## Todo
 
-- [ ] トップページのog:image
 - [ ] post preview
 - [ ] favicon
 - [ ] Custom <Document> for `lang="ja"`
