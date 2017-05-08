@@ -17,6 +17,7 @@ yarn dev
 
 ## Todo
 
+- [ ] rss feed
 - [ ] post preview
 - [ ] favicon
 - [ ] Custom <Document> for `lang="ja"`
