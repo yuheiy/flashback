@@ -1,0 +1,30 @@
+.GlobalHeader {
+  margin-top: var(--vertical-rhythm);
+  margin-bottom: var(--vertical-rhythm);
+  padding-right: var(--width-gap);
+  padding-left: var(--width-gap);
+  line-height: var(--vertical-rhythm);
+  text-align: center;
+}
+
+.GlobalHeader.-home {
+  margin-top: calc(var(--vertical-rhythm) * 3);
+  margin-bottom: calc(var(--vertical-rhythm) * 3);
+}
+
+.GlobalHeader h1 {
+  margin: 0;
+  line-height: 1;
+}
+
+.GlobalHeader a {
+}
+
+.GlobalHeader h1 svg {
+  width: auto;
+  height: calc(var(--vertical-rhythm) * 2);
+}
+
+.GlobalHeader.-home h1 svg {
+  height: calc(var(--vertical-rhythm) * 3);
+}

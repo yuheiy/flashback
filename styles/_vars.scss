@@ -1,0 +1,46 @@
+$color-bg: hsl(0, 0%, 99%);
+$color-primary: hsl(61, 100%, 70%);
+
+$ArticleHeader_color-text-bg: rgba($color-bg,.6);
+$ArticleHeader_color-text-bg-secondary: rgba($color-primary,.6);
+
+$breakpoint-x-small: 480px;
+$breakpoint-small: 600px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1280px;
+$breakpoint-x-large: 1920px;
+
+:root {
+  --color-bg: $color-bg;
+  --color-fg: hsl(0, 0%, 8%);
+  --color-fg-light: hsl(0, 0%, 56%);
+  --color-primary: $color-primary;
+
+  --font-stack-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-stack-serif: Hannari, serif;
+
+  --ratio: 1.6;
+  --vertical-rhythm: calc(var(--ratio) * 1rem);
+
+  --width-gap: calc(var(--vertical-rhythm) * .5);
+  --height-column: 14rem;
+
+  --font-size: 1rem;
+  --font-size-x-small: calc(var(--font-size) * .6);
+  --font-size-small: calc(var(--font-size) * .8);
+  --font-size-large: calc(var(--font-size) * 1.4);
+  --font-size-x-large: calc(var(--font-size) * 1.8);
+  --font-size-xx-large: calc(var(--font-size) * 2.2);
+  --font-size-xxx-large: calc(var(--font-size) * 2.6);
+  --font-size-xxxx-large: calc(var(--font-size) * 3);
+
+  --letter-spacing-large: .3em;
+
+  @media (min-width: $breakpoint-small) {
+    --width-gap: var(--vertical-rhythm);
+  }
+
+  @media (min-width: $breakpoint-x-large) {
+    --ratio: 1.8;
+  }
+}

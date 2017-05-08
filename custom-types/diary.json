@@ -1,0 +1,55 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    },
+    "published" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "Published"
+      }
+    },
+    "body" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Body"
+      }
+    },
+    "cover" : {
+      "config" : {
+        "fields" : {
+          "alternate-text" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "Alternate text"
+            }
+          },
+          "caption" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "Caption"
+            }
+          },
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "width" : null,
+                "height" : null
+              },
+              "label" : "Image"
+            }
+          }
+        },
+        "label" : "Cover"
+      },
+      "type" : "Group"
+    }
+  }
+}

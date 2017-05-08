@@ -1,0 +1,12 @@
+.Main {
+  padding-right: var(--width-gap);
+  padding-left: var(--width-gap);
+}
+
+.Main.-home {}
+
+.Main.-home .ArticleHeader_Cover img {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}

@@ -1,0 +1,52 @@
+{
+  "name": "flashback",
+  "version": "0.0.1",
+  "author": "Yuhei Yasuda <yuhei.yasuda1003@gmail.com> (https://yuheiy.com/)",
+  "bugs": {
+    "url": "https://github.com/yuheiy/flashback/issues"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "koa": "^2.2.0",
+    "koa-router": "^7.1.1",
+    "lodash.debounce": "^4.0.8",
+    "next": "^2.3.1",
+    "nprogress": "^0.2.0",
+    "prismic.io": "^3.5.6",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "remark": "^7.0.1",
+    "remark-html": "^6.0.0",
+    "striptags": "^3.0.1",
+    "webfontloader": "^1.6.27"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "csswring": "^5.1.1",
+    "dotenv": "^4.0.0",
+    "flow-bin": "^0.45.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.2",
+    "node-sass-globbing": "^0.0.23",
+    "postcss-loader": "^1.3.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.3",
+    "webpack": "^2.5.1"
+  },
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "homepage": "http://flashback.ryden.co.jp",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuheiy/flashback.git"
+  },
+  "scripts": {
+    "dev": "node -r dotenv/config server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "heroku-postbuild": "npm rebuild node-sass && npm run build"
+  }
+}

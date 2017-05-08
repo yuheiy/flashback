@@ -1,0 +1,90 @@
+.ArticleHeader {
+  --ArticleHeader_color-text-bg: $ArticleHeader_color-text-bg;
+  position: relative;
+}
+
+.ArticleHeader_TextGroup {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-block-start: calc(var(--vertical-rhythm) * .5);
+  position: absolute;
+
+  @media (min-width: $breakpoint-x-small) {
+    margin-block-start: 0;
+    padding-inline-end: var(--vertical-rhythm);
+    writing-mode: vertical-rl;
+    text-combine-upright: digits;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    margin-block-start: var(--vertical-rhythm);
+  }
+}
+
+.ArticleHeader_TextGroup h1,
+.ArticleHeader_TextGroup time {
+  display: inline-block;
+  background-color: var(--ArticleHeader_color-text-bg);
+
+  @media (min-width: $breakpoint-x-small) {
+    padding-block-start: calc(var(--vertical-rhythm) * .5);
+    padding-block-end: calc(var(--vertical-rhythm) * .5);
+    padding-inline-start: var(--vertical-rhythm);
+    padding-inline-end: var(--vertical-rhythm);
+    letter-spacing: var(--letter-spacing-large);
+  }
+}
+
+.ArticleHeader_TextGroup h1 {
+  margin: 0;
+  font-size: var(--font-size-large);
+  line-height: calc(var(--vertical-rhythm) * 1.5);
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--font-size-xx-large);
+    line-height: calc(var(--vertical-rhythm) * 2);
+  }
+
+  @media (min-width: $breakpoint-large) {
+    font-size: var(--font-size-xxxx-large);
+    line-height: calc(var(--vertical-rhythm) * 3);
+  }
+}
+
+.ArticleHeader_TextGroup footer {
+  order: -1;
+  margin-block-end: calc(var(--vertical-rhythm) * .25);
+}
+
+.ArticleHeader_TextGroup time {
+  font-size: var(--font-size-x-small);
+  line-height: var(--vertical-rhythm);
+
+  @media (min-width: $breakpoint-x-small) {
+    font-size: var(--font-size-small);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--font-size);
+  }
+}
+
+.ArticleHeader_Cover {
+  margin: 0 0 calc(var(--vertical-rhythm) * 2);
+}
+
+.ArticleHeader_Cover img {
+  width: calc(100% + (var(--width-gap) * 2));
+  max-width: calc(100% + (var(--width-gap) * 2));
+  margin-right: calc(var(--width-gap) * -1);
+  margin-left: calc(var(--width-gap) * -1);
+}
+
+.ArticleHeader_Cover figcaption {
+  margin-top: calc(var(--vertical-rhythm) * .25);
+  font-family: var(--font-stack-sans-serif);
+  font-size: var(--font-size-small);
+  line-height: calc(var(--vertical-rhythm) * .75);
+  color: var(--color-fg-light);
+}

@@ -1,0 +1,35 @@
+.GlobalFooter {
+  margin-top: calc(var(--vertical-rhythm) * 2);
+  margin-bottom: calc(var(--vertical-rhythm) * 2);
+  padding-right: var(--width-gap);
+  padding-left: var(--width-gap);
+  text-align: center;
+}
+
+.GlobalFooter address {
+  font-style: inherit;
+}
+
+.GlobalFooter dt,
+.GlobalFooter dd {
+  display: inline-block;
+}
+
+.GlobalFooter dt::after {
+  content: "：";
+}
+
+.GlobalFooter dd {
+  margin: 0;
+}
+
+.GlobalFooter ruby {
+  display: inline-flex;
+  flex-direction: column-reverse;
+}
+
+.GlobalFooter rt {
+  font-family: var(--font-stack-sans-serif);
+  font-size: var(--font-size-x-small);
+  line-height: calc(var(--vertical-rhythm) * .5);
+}

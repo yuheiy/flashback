@@ -1,0 +1,32 @@
+.ArticleLink {
+}
+
+.ArticleLink .ArticleHeader {
+  --ArticleHeader_color-text-bg: $ArticleHeader_color-text-bg-secondary;
+}
+
+.ArticleLink .ArticleHeader_Cover img {
+  filter: grayscale(100%);
+  transition: filter .2s ease-out;
+}
+
+.ArticleLink .ArticleHeader_TextGroup {
+  z-index: 1;
+}
+
+.ArticleHeader_TextGroup h1,
+.ArticleHeader_TextGroup time {
+  transition: background-color .2s ease-out;
+}
+
+.ArticleLink:hover .ArticleHeader,
+.ArticleLink:active .ArticleHeader,
+.ArticleLink:focus .ArticleHeader {
+  --ArticleHeader_color-text-bg: $ArticleHeader_color-text-bg;
+}
+
+.ArticleLink:hover .ArticleHeader_Cover img,
+.ArticleLink:active .ArticleHeader_Cover img,
+.ArticleLink:focus .ArticleHeader_Cover img {
+  filter: grayscale(0);
+}
