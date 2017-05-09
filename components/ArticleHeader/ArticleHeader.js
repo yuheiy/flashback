@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import debounce from 'lodash.debounce'
+import classNames from 'classnames'
 
 type Props = {
   +title: string,
@@ -12,6 +13,7 @@ type Props = {
     +alternateText: string,
     +caption?: string,
   },
+  +isHome?: boolean,
 };
 
 type State = {
@@ -89,7 +91,7 @@ export default class ArticleHeader extends React.Component<void, Props, State> {
   }
 
   render() {
-    const {title, published, cover} = this.props
+    const {title, published, cover, isHome} = this.props
     const textGroupStyle = this.state.isFirefox ? {
       writingMode: 'horizontal-tb',
     } : {}
@@ -104,7 +106,7 @@ export default class ArticleHeader extends React.Component<void, Props, State> {
           <time dateTime={published}>{convertDateToDisplayTime(published)}</time>
         </footer>
       </div>
-      <figure className="ArticleHeader_Cover">
+      <figure className={classNames('ArticleHeader_Cover', {'-home': isHome})}>
         <img
           ref={c => this.image = c}
           src={cover.image}

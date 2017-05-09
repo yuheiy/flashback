@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 100%;
   height: var(--height-column);
+  margin-bottom: calc(var(--vertical-rhythm) * 3);
   writing-mode: vertical-rl;
   text-combine-upright: digits;
   columns: var(--height-column);
@@ -28,20 +29,20 @@
   line-height: calc(var(--vertical-rhythm) * 2);
 }
 
-.ArticleBody p {
-  text-indent: 1rem;
+.ArticleBody > p {
+  text-indent: var(--font-size);
 }
 
 .ArticleBody ol,
 .ArticleBody ul {
-  padding-inline-start: 2rem;
+  padding-inline-start: calc(var(--font-size) * 2);
 }
 
 .ArticleBody blockquote {
   position: relative;
-  margin-inline-start: 1rem;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
+  margin-inline-start: var(--font-size);
+  padding-inline-start: var(--font-size);
+  padding-inline-end: var(--font-size);
   padding-block-start: var(--vertical-rhythm);
   padding-block-end: var(--vertical-rhythm);
   quotes: "“" "”";
@@ -68,10 +69,6 @@
   content: close-quote;
   left: 0;
   bottom: 0;
-}
-
-.ArticleBody blockquote p {
-  text-indent: 0;
 }
 
 .ArticleBody :last-child {

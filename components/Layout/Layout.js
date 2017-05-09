@@ -73,7 +73,7 @@ export default class Layout extends React.Component<DefaultProps, Props, void> {
       </Head>
 
       <GlobalHeader isHome={isHome} />
-      <Main isHome={isHome}>
+      <Main>
         {this.props.children}
       </Main>
       <GlobalFooter />

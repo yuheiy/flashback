@@ -1,15 +1,7 @@
 :root {
   font-family: var(--font-stack-sans-serif);
-  font-size: percentage(1.25);
+  font-size: calc(var(--font-size-root-ratio) * 100%);
   line-height: var(--ratio);
-
-  @media (min-width: $breakpoint-small) {
-    --width-gap: var(--vertical-rhythm);
-  }
-
-  @media (min-width: $breakpoint-x-large) {
-    --ratio: 1.8;
-  }
 
   &.wf-active {
     font-family: var(--font-stack-serif);

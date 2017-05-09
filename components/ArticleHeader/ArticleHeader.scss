@@ -81,6 +81,12 @@
   margin-left: calc(var(--width-gap) * -1);
 }
 
+.ArticleHeader_Cover.-home img {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .ArticleHeader_Cover figcaption {
   margin-top: calc(var(--vertical-rhythm) * .25);
   font-family: var(--font-stack-sans-serif);

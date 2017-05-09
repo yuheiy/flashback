@@ -23,7 +23,9 @@ $breakpoint-x-large: 1920px;
   --vertical-rhythm: calc(var(--ratio) * 1rem);
 
   --width-gap: calc(var(--vertical-rhythm) * .5);
-  --height-column: 14rem;
+  --width-border: 3px;
+
+  --height-column: calc(var(--font-size) * 14);
 
   --font-size: 1rem;
   --font-size-x-small: calc(var(--font-size) * .6);
@@ -33,6 +35,8 @@ $breakpoint-x-large: 1920px;
   --font-size-xx-large: calc(var(--font-size) * 2.2);
   --font-size-xxx-large: calc(var(--font-size) * 2.6);
   --font-size-xxxx-large: calc(var(--font-size) * 3);
+
+  --font-size-root-ratio: 1.25;
 
   --letter-spacing-large: .3em;
 

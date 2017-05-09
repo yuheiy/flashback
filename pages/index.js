@@ -55,7 +55,8 @@ export default class HomePage extends React.Component<void, Props, void> {
             <ArticleHeader
               title={diary.title}
               published={diary.published}
-              cover={cover} />
+              cover={cover}
+              isHome={true} />
           </ArticleLink>
         </section>
       })}
