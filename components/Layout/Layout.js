@@ -13,17 +13,11 @@ const isBrowser = typeof window !== 'undefined'
 
 if (isBrowser) {
   const ua = navigator.userAgent
-  const isMacOrIos = ua.match(/Mac OS X/) || ua.match(/iPhone OS/) || ua.match(/iPad; CPU OS/)
 
-  if (isMacOrIos) {
-    const WebFont = require('webfontloader')
-
-    WebFont.load({
-      custom: {
-        families: ['Hannari'],
-        urls: ['https://fonts.googleapis.com/earlyaccess/hannari.css']
-      }
-    })
+  if (ua.match(/Mac OS X/)) {
+    document.documentElement.dataset.os = 'Mac OS'
+  } else if (ua.match(/iPhone OS/) || ua.match(/iPad; CPU OS/)) {
+    document.documentElement.dataset.os = 'iOS'
   }
 }
 
@@ -66,6 +60,7 @@ export default class Layout extends React.Component<DefaultProps, Props, void> {
         <meta name="description" content={description} />
         <title>{documentTitle}</title>
         <link rel="canonical" href={pathname} />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/hannari.css" />
         <style dangerouslySetInnerHTML={{ __html: styleSheet }} />
         {image && <meta name="twitter:card" content="summary_large_image" />}
         <meta property="og:title" content={title || SITE_TITLE} />

@@ -3,7 +3,8 @@
   font-size: calc(var(--font-size-root-ratio) * 100%);
   line-height: var(--ratio);
 
-  &.wf-active {
+  &[data-os="Mac OS"],
+  &[data-os="iOS"] {
     font-family: var(--font-stack-serif);
   }
 }

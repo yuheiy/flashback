@@ -17,6 +17,7 @@ yarn dev
 
 ## Todo
 
+- [ ] CSS Font Loading / [fontfaceobserver](https://github.com/bramstein/fontfaceobserver)
 - [ ] ms edge
 - [ ] rss feed
 - [ ] post preview
