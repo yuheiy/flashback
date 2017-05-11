@@ -12,14 +12,19 @@ import styleSheet from '../../styles/index.scss'
 const isBrowser = typeof window !== 'undefined'
 
 if (isBrowser) {
-  const WebFont = require('webfontloader')
+  const ua = navigator.userAgent
+  const isMacOrIos = ua.match(/Mac OS X/) || ua.match(/iPhone OS/) || ua.match(/iPad; CPU OS/)
 
-  WebFont.load({
-    custom: {
-      families: ['Hannari'],
-      urls: ['https://fonts.googleapis.com/earlyaccess/hannari.css']
-    }
-  })
+  if (isMacOrIos) {
+    const WebFont = require('webfontloader')
+
+    WebFont.load({
+      custom: {
+        families: ['Hannari'],
+        urls: ['https://fonts.googleapis.com/earlyaccess/hannari.css']
+      }
+    })
+  }
 }
 
 NProgress.configure({showSpinner: false})

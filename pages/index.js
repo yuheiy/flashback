@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import ArticleLink from '../components/ArticleLink'
 import ArticleHeader from '../components/ArticleHeader'
-import {fetchAllDiaries} from '../utils/postApi'
+import {fetchAllDiaries} from '../utils/post-api'
 import type {DiaryObjectType} from '../types'
 
 type Props = {

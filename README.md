@@ -17,8 +17,8 @@ yarn dev
 
 ## Todo
 
+- [ ] ms edge
 - [ ] rss feed
 - [ ] post preview
 - [ ] favicon
-- [ ] Custom `<Document>` for `lang="ja"`
 - [ ] 記事取得失敗画面

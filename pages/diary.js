@@ -6,7 +6,7 @@ import ArticleHeader from '../components/ArticleHeader'
 import ArticleBody from '../components/ArticleBody'
 import ArticleNavigation from '../components/ArticleNavigation'
 import striptags from 'striptags'
-import {fetchDiaryById, fetchNextDiary, fetchPrevDiary} from '../utils/postApi'
+import {fetchDiaryById, fetchNextDiary, fetchPrevDiary} from '../utils/post-api'
 import type {DiaryObjectType} from '../types'
 
 type Props = {
