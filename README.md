@@ -21,5 +21,4 @@ yarn dev
 - [ ] ms edge
 - [ ] rss feed
 - [ ] post preview
-- [ ] favicon
 - [ ] 記事取得失敗画面

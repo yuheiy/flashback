@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const next = require('next')
 const Koa = require('koa')
 const Router = require('koa-router')
@@ -14,6 +15,16 @@ app.prepare()
 .then(() => {
   const server = new Koa()
   const router = new Router()
+
+  ;[
+    '/favicon.ico',
+  ].forEach(file => {
+    const pathToFile = path.join(__dirname, 'static', file)
+    router.get(file, async (ctx) => {
+      await app.serveStatic(ctx.req, ctx.res, pathToFile)
+      ctx.respond = false
+    })
+  })
 
   router.get('/diaries/:id', async (ctx) => {
     const queryParams = {
