@@ -44,7 +44,7 @@ export default class ArticleBody extends React.Component<void, Props, void> {
   }
 
   componentDidMount() {
-    this.debouncedAdjustSize = debounce(this.adjustSize, 300)
+    this.debouncedAdjustSize = debounce(this.adjustSize, 100)
     window.addEventListener('resize', this.debouncedAdjustSize)
     this.adjustSize()
   }

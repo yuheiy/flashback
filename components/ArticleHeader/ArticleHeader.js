@@ -70,7 +70,7 @@ export default class ArticleHeader extends React.Component<void, Props, State> {
   }
 
   componentDidMount() {
-    this.debouncedSetMaxHeight = debounce(this.setMaxHeight, 300)
+    this.debouncedSetMaxHeight = debounce(this.setMaxHeight, 100)
     window.addEventListener('resize', this.debouncedSetMaxHeight)
     this.setMaxHeight()
 
