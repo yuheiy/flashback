@@ -1,0 +1,7 @@
+{
+  "presets": [
+    "next/babel",
+    "babel-preset-env", // transform es module
+    "babel-preset-stage-0",
+  ],
+}

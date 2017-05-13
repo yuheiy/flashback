@@ -1,0 +1,8 @@
+doctype xml
+urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+  url
+    loc= `${url}/`
+
+  each diary in diaries
+    url
+      loc= `${url}/diaries/${diary.id}`

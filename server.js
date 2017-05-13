@@ -1,9 +1,10 @@
-'use strict'
-
-const path = require('path')
-const next = require('next')
-const Koa = require('koa')
-const Router = require('koa-router')
+import path from 'path'
+import next from 'next'
+import Koa from 'koa'
+import Router from 'koa-router'
+import pug from 'pug'
+import {fetchAllDiaries} from './utils/post-api'
+import {SITE_TITLE, SITE_URL} from './constants'
 
 const PORT = process.env.PORT || 3000
 
@@ -22,6 +23,31 @@ app.prepare()
     const pathToFile = path.join(__dirname, 'static', file)
     router.get(file, async (ctx) => {
       await app.serveStatic(ctx.req, ctx.res, pathToFile)
+      ctx.respond = false
+    })
+  })
+
+  ;[
+    '/atom.xml',
+    '/sitemap.xml',
+  ].forEach(file => {
+    const pathToFile = path.join(__dirname, 'views', file.replace(/\.xml$/, '.pug'))
+    let compiler
+
+    router.get(file, async (ctx) => {
+      if (!compiler) {
+        compiler = pug.compileFile(pathToFile, {
+          pretty: true,
+        })
+      }
+
+      const diaries = await fetchAllDiaries()
+      const data = compiler({
+        title: SITE_TITLE,
+        url: SITE_URL,
+        diaries,
+      })
+      ctx.res.end(data)
       ctx.respond = false
     })
   })

@@ -19,6 +19,5 @@ yarn dev
 
 - [ ] CSS Font Loading / [fontfaceobserver](https://github.com/bramstein/fontfaceobserver)
 - [ ] ms edge
-- [ ] rss feed
 - [ ] post preview
 - [ ] 記事取得失敗画面

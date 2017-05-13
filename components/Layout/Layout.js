@@ -60,6 +60,7 @@ export default class Layout extends React.Component<DefaultProps, Props, void> {
         <meta name="description" content={description} />
         <title>{documentTitle}</title>
         <link rel="canonical" href={pathname} />
+        <link rel="alternate" href="/atom.xml" type="application/atom+xml" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/hannari.css" />
         <style dangerouslySetInnerHTML={{ __html: styleSheet }} />
         {image && <meta name="twitter:card" content="summary_large_image" />}

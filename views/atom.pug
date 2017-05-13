@@ -1,0 +1,19 @@
+- var tag = `${url.replace(/^https?:\/\//, '')}`
+
+doctype xml
+feed(xmlns="http://www.w3.org/2005/Atom", xml:lang="ja")
+  title= title
+  link(rel="alternate", href= `${url}/`)
+  link(rel="self", type="application/atom+xml", href= `${url}/atom.xml`)
+  author
+    name 兵庫 達人
+  id= `${tag}:feed`
+  updated= diaries[0].published
+
+  each diary in diaries
+    entry
+      title= diary.title
+      link(rel="alternate", href=`${url}/diaries/${diary.id}`)
+      id= `${tag}:entry://${diary.id}`
+      published= diary.published
+      content(type="html")= `<figure><img src="${diary.cover.image}" alt="${diary.cover.alternateText}"><figcaption>${diary.cover.caption}</figcaption></figure>\n${diary.body}`
