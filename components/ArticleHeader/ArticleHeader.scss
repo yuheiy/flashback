@@ -77,8 +77,11 @@
 .ArticleHeader_Cover img {
   width: calc(100% + (var(--width-gap) * 2));
   max-width: calc(100% + (var(--width-gap) * 2));
+  height: calc(9 / 16 * 100vw);
+  min-height: calc(var(--vertical-rhythm) * 6);
   margin-right: calc(var(--width-gap) * -1);
   margin-left: calc(var(--width-gap) * -1);
+  object-fit: cover;
 }
 
 .ArticleHeader_Cover.-home img {

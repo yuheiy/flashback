@@ -5,9 +5,9 @@ type Props = {
   +children?: any,
 };
 
-export default class Main extends React.Component<void, Props, void> {
+export default class Content extends React.Component<void, Props, void> {
   render() {
-    return <main className="Main">
+    return <main className="Content">
       {this.props.children}
     </main>
   }

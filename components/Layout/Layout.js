@@ -5,7 +5,7 @@ import Router from 'next/router'
 import NProgress from 'nprogress'
 import GlobalHeader from '../GlobalHeader'
 import GlobalFooter from '../GlobalFooter'
-import Main from '../Main'
+import Content from '../Content'
 import {SITE_TITLE, SITE_URL} from '../../constants'
 import styleSheet from '../../styles/index.scss'
 
@@ -64,7 +64,7 @@ export default class Layout extends React.Component<DefaultProps, Props, void> {
         <style dangerouslySetInnerHTML={{ __html: styleSheet }} />
         {image && <meta name="twitter:card" content="summary_large_image" />}
         <meta property="og:title" content={title || SITE_TITLE} />
-        <meta propetry="og:type" content={isHome ? 'website' : 'article'} />
+        <meta property="og:type" content={isHome ? 'website' : 'article'} />
         {image && <meta property="og:image" content={getFullUrl(image)} />}
         <meta property="og:url" content={getFullUrl(pathname)} />
         <meta property="og:description" content={description} />
@@ -73,9 +73,9 @@ export default class Layout extends React.Component<DefaultProps, Props, void> {
       </Head>
 
       <GlobalHeader isHome={isHome} />
-      <Main>
+      <Content>
         {this.props.children}
-      </Main>
+      </Content>
       <GlobalFooter />
     </div>
   }
