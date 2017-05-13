@@ -1,5 +1,7 @@
 const webpack = require('webpack')
 
+const dev = process.env.NODE_ENV !== 'production'
+
 module.exports = {
   webpack: (config) => {
     config.module.rules.push({
@@ -12,11 +14,15 @@ module.exports = {
       test: /\.scss$/,
       use: [
         'raw-loader',
-        'postcss-loader?sourceMap=inline',
         {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: dev,
+          },
+        }, {
           loader: 'sass-loader',
           options: {
-            sourceMap: true,
+            sourceMap: dev,
             importer: require('node-sass-globbing'),
           },
         },
@@ -36,5 +42,5 @@ module.exports = {
     )
 
     return config
-  }
+  },
 }
