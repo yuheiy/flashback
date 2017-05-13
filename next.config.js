@@ -14,16 +14,12 @@ module.exports = {
       test: /\.scss$/,
       use: [
         'raw-loader',
+        `postcss-loader${dev ? '?sourceMap=inline' : ''}`,
         {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: dev,
-          },
-        }, {
           loader: 'sass-loader',
           options: {
-            sourceMap: dev,
             importer: require('node-sass-globbing'),
+            sourceMap: dev,
           },
         },
       ],
