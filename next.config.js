@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const BabiliPlugin = require("babili-webpack-plugin")
 
 const dev = process.env.NODE_ENV !== 'production'
 
@@ -26,8 +27,12 @@ module.exports = {
     })
 
     // https://github.com/zeit/next.js/issues/1195
-    config.plugins = config.plugins
-    .filter(plugin => plugin.constructor.name !== 'UglifyJsPlugin')
+    if (!dev) {
+      config.plugins = config.plugins
+      .filter(plugin => plugin.constructor.name !== 'UglifyJsPlugin')
+
+      config.plugins.push(new BabiliPlugin())
+    }
 
     config.plugins.push(
       new webpack.DefinePlugin({
