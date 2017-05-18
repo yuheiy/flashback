@@ -9,6 +9,8 @@
   box-sizing: border-box;
   margin-block-start: calc(var(--vertical-rhythm) * .5);
   position: absolute;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
 
   @media (min-width: $breakpoint-x-small) {
     margin-block-start: 0;

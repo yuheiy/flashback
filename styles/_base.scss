@@ -1,4 +1,5 @@
 :root {
+  overflow-wrap: break-word;
   font-family: var(--font-stack-sans-serif);
   font-size: calc(var(--font-size-root-ratio) * 100%);
   line-height: var(--ratio);

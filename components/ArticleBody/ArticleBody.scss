@@ -21,12 +21,16 @@
 
 .ArticleBody h2 {
   font-size: var(--font-size-x-large);
+  font-kerning: normal;
   line-height: calc(var(--vertical-rhythm) * 2);
+  text-rendering: optimizeLegibility;
 }
 
 .ArticleBody h3 {
   font-size: var(--font-size-large);
+  font-kerning: normal;
   line-height: calc(var(--vertical-rhythm) * 2);
+  text-rendering: optimizeLegibility;
 }
 
 .ArticleBody > p {
